@@ -2,14 +2,21 @@
 const express = require('express')
 const app = express()
 //method override as a requirement
-const methodOverride = require(`method-override`)
-// const routes = require('./routes/index')
+//const methodOverride = require(`method-override`)
+const routes = require('./routes/index')
 
-// app.use(express.urlencoded({ extended: true }));
-// app.use(express.json());
-// app.use('/', routes)
+
+
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+app.use('/', routes)
 // This is part of the requirement portion
-app.use(methodOverride('_method'))
+//app.use(methodOverride('_method'))
+// i want the views to be available through handlebars
+//app.set(`view engine`, `hbs`)
+
+
+
 
 const PORT = process.env.PORT || 3000
 app.listen(PORT, () => {
