@@ -16,8 +16,8 @@ const nhome1 = new NursingHome({
 //SEED DATA - Patients
 const Tom = new Patient({
     firstName: "Tom",
-    lastName: "Richard",
-    age: 26,
+    lastName: "Matheson",
+    age: 69,
     conditions: "Heart Problems",
     drugs: [
         {
@@ -28,6 +28,19 @@ const Tom = new Patient({
     roomNumber: 238,
 })
 
+const Sally = new Patient({
+    firstName: "Tom",
+    lastName: "Matheson",
+    age: 77,
+    conditions: "Loneliness",
+    drugs: [
+        {
+            type: Schema.Types.ObjectId,
+            ref: 'Drug' //ONE TO MANY RELATIONSHIP BECAUSE PATIENT CAN HAVE MANY DRUGS
+        }
+    ],
+    roomNumber: 333,
+})
 
 //SEED DATA - Drugs
 

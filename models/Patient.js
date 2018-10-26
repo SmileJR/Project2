@@ -13,6 +13,7 @@ const Patient = new Schema({
         }
     ],
     roomNumber: Number,
+    petName: String
     
 })
 
