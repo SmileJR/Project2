@@ -2,13 +2,13 @@ const Drug = require(`../models/Drug`)
 const NursingHome = require(`../models/NursingHome`)
 const Patient = require(`../models/Patient`)
 
-const drugsController = {
+const nursinghomesController = {
     index: (req, res) => {
-        res.send("Hey whats up this is drugs index")
+        res.send("Hey whats up this is nursinghomes index")
     }
 }
 
 
 
 
-module.exports = drugsController
+module.exports = nursinghomesController

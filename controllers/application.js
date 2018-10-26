@@ -1,6 +1,6 @@
 applicationController = {
     index: (req, res) => {
-        res.send('hello world, sup, it`s cam who is super cool')
+        res.send(`hello world, this is from app index`)
     }
 }
 
