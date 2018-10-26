@@ -7,13 +7,18 @@ const routes = require('./routes/index')
 
 
 
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
-app.use('/', routes)
+app.use(express.urlencoded({ extended: true }))
+app.use(express.json())
+
+//THIS CODE IS CAUSING THE SERVER TO CRASH
+app.use(`/`, routes)
 // This is part of the requirement portion
 //app.use(methodOverride('_method'))
 // i want the views to be available through handlebars
-//app.set(`view engine`, `hbs`)
+//THIS CODE IS CAUSING THE SERVER TO CRASH
+
+
+app.set(`view engine`, `hbs`)
 
 
 
