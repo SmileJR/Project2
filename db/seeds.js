@@ -33,20 +33,14 @@ const Sally = new Patient({
     lastName: "Matheson",
     age: 77,
     conditions: "Loneliness",
-    drugs: [
-        {
-            type: Schema.Types.ObjectId,
-            ref: 'Drug' //ONE TO MANY RELATIONSHIP BECAUSE PATIENT CAN HAVE MANY DRUGS
-        }
-    ],
     roomNumber: 333,
-    pet: "Cat"
+    pet: "Cat",
     petName: "Scruffles"
 })
 
 const Eugene = new Patient({
     firstName: "Eugene",
-    lastName: "Stinkler",
+    lastName: "Minkler",
     age: 99,
     conditions: "Dementia",
     drugs: [

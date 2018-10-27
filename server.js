@@ -1,9 +1,12 @@
+require('dotenv').config()
 // This is all just boiler plate for the serve page
 const express = require('express')
 const app = express()
 //method override as a requirement
 //const methodOverride = require(`method-override`)
 const routes = require('./routes/index')
+const mongoose = require('mongoose')
+mongoose.connect(process.env.MONGODB_URI)
 
 
 
