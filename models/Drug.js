@@ -5,7 +5,7 @@ const Drug = new Schema({
     name: String,
     strengthInMg: Number,
     routeTaken: String,
-    dailyFrequency: Number
+    dailyFrequency: String
 })
 
 module.exports = mongoose.model('Drug', Drug)
