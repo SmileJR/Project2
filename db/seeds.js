@@ -37,15 +37,15 @@ const Tom = new Patient({
     roomNumber: 238,
 })
 
-const Sally = new Patient({
-    firstName: "Tom",
-    lastName: "Matheson",
-    age: 77,
-    conditions: "Loneliness",
-    roomNumber: 333,
-    pet: "Cat",
-    petName: "Scruffles"
-})
+// const Sally = new Patient({
+//     firstName: "Tom",
+//     lastName: "Matheson",
+//     age: 77,
+//     conditions: "Loneliness",
+//     roomNumber: 333,
+//     pet: "Cat",
+//     petName: "Scruffles"
+// })
 
 const Eugene = new Patient({
     firstName: "Eugene",
@@ -65,7 +65,8 @@ const nhome1 = new NursingHome({
     location: "123 Acorn Street",
     security: "Low",
     petsAllowed: true,
-    patients: [Sally, Eugene] //This shit has the new products that we listed above, they are in an array. this was referenced in the models page for store
+    patients: [Eugene]
+    //patients: [Sally, Eugene] not sure if i can do it like this
 })
 
 const nhome2 = new NursingHome({
@@ -73,9 +74,15 @@ const nhome2 = new NursingHome({
     location: "444 Sunset Ave",
     security: "Mid-Level",
     petsAllowed: false,
-    patients: [Tom,] //This shit has the new products that we listed above, they are in an array. this was referenced in the models page for store
+    patients: [Tom] //This has the new patients that we listed above, they are in an array. this was referenced in the models page for store
 })
 
-module.exports = mongoose.model('Drug', Drug)
+NursingHome.remove({}) //if there is a nursinghome that exists delete all of them and make a clean slate
+    .then(() => Patient.insertMany([Eugene,Tom])) 
+    .then(() => Drug.insertMany([drug1,drug2,drug3])) 
+    .then(() => nhome1.save())
+    .then(() => nhome2.save())
+    .then(() => console.log("Database seeded success"))
+    .then(() => mongoose.connection.close())
 
 
