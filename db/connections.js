@@ -8,6 +8,14 @@ const mongoose = require('mongoose')
 // })
 
 
+// this one?
+// mongoose.connect('mongodb://localhost/my-database-name')
+// mongoose.connection.once('open', () => {
+//     console.log('Mongoose has connected to MongoDB')
+// })
+
+
+
 //Or do I use this one?
 mongoose.connect(process.env.MONGODB_URI).then(() => {
 console.log('Connected to MongoDB')
