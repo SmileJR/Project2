@@ -1,12 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    {{{body}}}
-</body>
+<html>
+    <head>
+        <title>NuHome</title>
+        <!-- Static assets can go in here! -->
+        <!-- <link rel="stylesheet" type="text/css" href="/css/styles.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    </head>
+    <body>
+         <header class="site-header">
+    <nav>
+      <div class="nav-wrapper">
+        <a href="/" class="brand-logo left">NuHome</a>
+        <ul class="right">
+          <li><a href="/chirp/new">whats this?</a></li>
+          <li><a href="/user/new">new patient</a></li>
+        </ul>
+    
+      </div>
+    </nav>
+  </header>
+        {{{ body }}}
+        <!-- The body tag is what our templates will be replacing. -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    </body>
 </html>
