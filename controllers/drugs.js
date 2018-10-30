@@ -13,7 +13,7 @@ const drugsController = {
         },
     show: (req, res) => {
         Drug.findById(req.params.id).then((drug) => {
-            res.render('drugs/:id', { drug: drug })
+            res.render('drugs/show', { drug: drug })
         })
     },
     create: (req, res) => {
