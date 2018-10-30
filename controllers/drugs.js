@@ -8,7 +8,15 @@ const drugsController = {
     },
     show: (req, res) => {
         res.render('drugs/show.hbs')
-    }
+    },
+    create: (req, res) => {
+        Drug.create(req.body).then((newDrug) =>{
+            res.redirect(`drugs/${newDrug._id}`)
+        })
+    },
+    update: (req, res) => {
+        res.send('Hello from drugs!!!!!! update')
+      }
 }
 
 

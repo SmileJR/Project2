@@ -24,8 +24,13 @@ router.get(`/patients/:id`, patientsController.show)
 // ==============DRUGS===================
 router.get(`/drugs`, drugsController.index)
 router.get(`/drugs/:id`, drugsController.show)
-// router.get(`/drugs/new`, drugsController.new)
-// router.get(``)
+
+router.post(`/drugs`, drugsController.create)
+router.get(`/drugs`, drugsController.new)
+
+router.get(`/drugs/:id`, drugsController.edit)
+router.put('/drugs/:id', drugsController.update)
+
 
 
 

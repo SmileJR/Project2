@@ -1,0 +1,40 @@
+<main>
+
+	<h2>Edit Medical Records</h2>
+
+	<a href="/">Home Page</a>
+
+	<div id="edit-form" class="drug-container-show">
+
+    <form action="/{{drug._id}}?_method=PATCH" method="POST">
+      <div>
+        <label for="img">img: </label>
+        <input type="text" name='img' value="{{drug.img}}">
+      </div>
+        <label for="Name">name: </label>
+        <input type="text" name="name" value="{{drug.name}}">
+      </div>
+      <div>
+        <label for="Strength In Mg">strengthInMg: </label>
+        <input type="number" name="strengthInMg" value="{{drug.description}}">
+      </div>
+      <div>
+      <div>
+        <label for="Route Taken">routeTaken: </label>
+        <input type="text" name="routeTaken" value="{{drug.price}}">
+      </div>
+      <div>
+        <label for="Daily Frequency">dailyFrequency: </label>
+        <input type="text" name="dailyFrequency" value="{{drug.qty}}">
+      </div>
+      <button type="submit">Add New Drug</button>
+    </form>
+
+
+
+		<div id="img-preview">
+			<img src="{{drug.img}}">
+		</div>
+
+	</div>
+</main>

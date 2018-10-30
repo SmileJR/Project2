@@ -7,6 +7,7 @@ const Drug = require('../models/Drug.js')
 
 //SEED DATA - Drugs
 const drug1 = new Drug({
+    img: "http://d1dc7fy73ia9qh.cloudfront.net/wp-content/uploads/2016/05/Medium-Length-Hairstyles-for-Older-Women-6.jpg?iv=219",
     name: "Triazolam",
     strengthInMg: 200,
     routeTaken: "Orally",
@@ -14,6 +15,7 @@ const drug1 = new Drug({
 })
 
 const drug2 = new Drug({
+    img: "http://d1dc7fy73ia9qh.cloudfront.net/wp-content/uploads/2016/05/Medium-Length-Hairstyles-for-Older-Women-6.jpg?iv=219",
     name: "Captopril",
     strengthInMg: 1000,
     routeTaken: "Orally",
@@ -21,6 +23,7 @@ const drug2 = new Drug({
 })
 
 const drug3 = new Drug({
+    img: "http://d1dc7fy73ia9qh.cloudfront.net/wp-content/uploads/2016/05/Medium-Length-Hairstyles-for-Older-Women-6.jpg?iv=219",
     name: "Omeprazole",
     strengthInMg: 40,
     routeTaken: "Orally",
@@ -31,6 +34,7 @@ const drug3 = new Drug({
 
 //SEED DATA - Patients
 const Tom = new Patient({
+    img: "http://d1dc7fy73ia9qh.cloudfront.net/wp-content/uploads/2016/05/Medium-Length-Hairstyles-for-Older-Women-6.jpg?iv=219",
     firstName: "Tom",
     lastName: "Matheson",
     age: 68,
@@ -50,6 +54,7 @@ const Tom = new Patient({
 // })
 
 const Eugene = new Patient({
+    img: "https://i.pinimg.com/originals/54/42/e2/5442e25f6479af20d2f4b77c1c5ddf41.jpg",
     firstName: "Eugene",
     lastName: "Minkler",
     age: 99,

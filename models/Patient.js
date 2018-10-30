@@ -2,6 +2,7 @@ const mongoose = require('../db/connections')
 const Schema = mongoose.Schema
 
 const Patient = new Schema({
+    img: String,
     firstName: String,
     lastName: String,
     age: Number,
