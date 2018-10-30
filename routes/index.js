@@ -26,9 +26,9 @@ router.get(`/drugs`, drugsController.index)
 router.get(`/drugs/:id`, drugsController.show)
 
 router.post(`/drugs`, drugsController.create)
-router.get(`/drugs`, drugsController.new)
+// router.get(`/drugs`, drugsController.new)
 
-router.get(`/drugs/:id`, drugsController.edit)
+router.get(`/drugs/:id/edit`, drugsController.edit) // this will hange that specifi drug
 router.put('/drugs/:id', drugsController.update)
 
 

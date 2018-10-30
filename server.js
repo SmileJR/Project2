@@ -20,8 +20,8 @@ app.use(methodOverride('_method'))
 // i want the views to be available through handlebars
 //THIS CODE IS CAUSING THE SERVER TO CRASH
 
-
 app.set(`view engine`, `hbs`)
+
 
 
 

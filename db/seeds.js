@@ -40,7 +40,7 @@ const Tom = new Patient({
     age: 68,
     conditions: "Heart Problems",
     drugs: [drug1],
-    roomNumber: 238,
+    roomNumber: 238
 })
 
 // const Sally = new Patient({
