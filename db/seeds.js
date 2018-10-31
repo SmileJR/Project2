@@ -84,11 +84,21 @@ const nhome2 = new NursingHome({
     patients: [Tom] //This has the new patients that we listed above, they are in an array. this was referenced in the models page for store
 })
 
+const nhome3 = new NursingHome({
+    name: "Whistiling Willows",
+    location: "783 Highland Blvd",
+    security: "High",
+    petsAllowed: false,
+    patients: [Tom] //This has the new patients that we listed above, they are in an array. this was referenced in the models page for store
+})
+
+
 NursingHome.remove({}) //if there is a nursinghome that exists delete all of them and make a clean slate
     .then(() => Patient.insertMany([Eugene,Tom])) 
     .then(() => Drug.insertMany([drug1,drug2,drug3])) 
     .then(() => nhome1.save())
     .then(() => nhome2.save())
+    .then(() => nhome3.save())
     .then(() => console.log("Database seeded success"))
     .then(() => mongoose.connection.close())
 
