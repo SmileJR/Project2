@@ -1,8 +1,4 @@
-<form action="/drugs" method="POST">
-        <div>
-          <label for="img">img: </label>
-          <input type="text" name="img" placeholder="Your image here">
-        </div>
+{{!-- <form action="/drugs" method="POST">
         <div>
           <label for="drugName">Drug Name: </label>
           <input type="text" name="drugName" placeholder="YourDrug name here">
@@ -21,7 +17,23 @@
           <input type="text" name="Daily Frequency" placeholder="X Times a Day">
         </div>
         <a href="">
-          <button type="submit" class="btn btn-light" id="create-button">Create Your Tea Tree</button>
+          <button type="submit" class="btn btn-light" id="create-button">Add Your new Drug</button>
+        </a>
+        <button class="btn btn-light">
+          <a href="/">Return to Home Page</a>
+        </button>
+      </form> --}}
+<form action="/drugs" method="POST">
+        <div>
+          <label for="name">Name: </label>
+          <input type="text" name="name" placeholder="Enter Name of drug here">
+        </div>
+        <div>
+          <label for="strengthInMg">Strength In Mgs: </label>
+          <input type="text" name="strengthInMg" placeholder="Strength in Mgs">
+        </div>
+        <a href="">
+          <button type="submit" class="btn btn-light" id="create-button">Add Your New Drug</button>
         </a>
         <button class="btn btn-light">
           <a href="/">Return to Home Page</a>

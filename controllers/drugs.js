@@ -39,7 +39,7 @@ const drugsController = {
     },
     delete: (req, res) => { 
         Drug.findByIdAndRemove(req.params.id).then(() => {
-            res.redirect(`/`)
+            res.redirect('/drugs')
         })
     }
 

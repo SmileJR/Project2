@@ -9,12 +9,10 @@
 
 {{!-- <p><a href="/drugs/{{drug._id}}/delete" class="waves-effect waves-light btn-large">Delete Drug</a></p> --}}
  
- 
- 
- <p><form action="/drugs/{{drug._id}}?_method=DELETE" method="POST">
+
+ <form action="/drugs/{{drug._id}}?_method=DELETE" method="POST">
       <button type="submit">DELETE THIS DRUG</button>
-    </form>
-    </p>
+</form>
 
-
-<form id="delete-drug" action="/drugs/{{drug._id}}?_method=DELETE" method="POST"></form>    
+{{!-- 
+<form id="delete-drug" action="/drugs/{{drug._id}}?_method=DELETE" method="POST"></form>     --}}

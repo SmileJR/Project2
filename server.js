@@ -9,18 +9,20 @@ const mongoose = require('mongoose')
 // mongoose.connect(process.env.MONGODB_URI)
 
 
+app.set(`view engine`, `hbs`)
 
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 
 //THIS CODE IS CAUSING THE SERVER TO CRASH
-app.use(`/`, routes)
 // This is part of the requirement portion
 app.use(methodOverride('_method'))
 // i want the views to be available through handlebars
 //THIS CODE IS CAUSING THE SERVER TO CRASH
 
-app.set(`view engine`, `hbs`)
+app.use(`/`, routes)
+
+
 
 
 
