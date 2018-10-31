@@ -12,7 +12,10 @@ const patientsController = {
     })
     },
     show: (req, res) => {
-        res.render('patients/show.hbs')
+        Patient.findById(req.params.id).then((patients) => {
+        res.render('patients/show', {patients: patients})
+
+    })
     }
 }
 
