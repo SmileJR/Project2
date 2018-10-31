@@ -4,11 +4,19 @@ const Patient = require(`../models/Patient`)
 
 const nursinghomesController = {
     index: (req, res) => {
-        res.send("Hey whats up this is nursinghomes index")
+        NursingHome.find() //find all the nursing homes
+        .then((nursinghomes) => {
+        res.render(`nursinghome/index`, {
+            nursinghomes: nursinghomes
+            })
+        })
     },
     show: (req, res) => {
-        res.render('nursinghome/show.hbs')
-    }
+        NursingHome.findById(req.params.id).then((nursinghomes) => {
+        res.render('nursinghome/show', {nursinghomes: nursinghomes})
+    })
+}
+    
 }
 
 
