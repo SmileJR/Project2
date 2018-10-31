@@ -12,8 +12,8 @@ const nursinghomesController = {
         })
     },
     show: (req, res) => {
-        NursingHome.findById(req.params.id).then((nursinghomes) => {
-        res.render('nursinghome/show', {nursinghomes: nursinghomes})
+        NursingHome.findById(req.params.id).then((nursinghome) => {
+        res.render('nursinghome/show', {nursinghome: nursinghome})
     })
 }
     
