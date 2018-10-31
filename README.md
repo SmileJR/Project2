@@ -1,6 +1,6 @@
 # Project2
 
-PROJECT DESCRIPTION: I have built an interactive pharmacy inventory system that keeps track of patients, their health conditions, and what medications they may be taking. 
+PROJECT DESCRIPTION: I have built an interactive nursing home pprogram that keeps track of patients, their health conditions, what medications they may be taking and other relevant information. 
 
 LINK TO DEPLOYED APP: https://young-cove-44913.herokuapp.com/
 
