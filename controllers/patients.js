@@ -4,7 +4,12 @@ const Patient = require(`../models/Patient`)
 
 const patientsController = {
     index: (req, res) => {
-        res.render(`patients/index.hbs`)
+        Patient.find()//find all the patients
+        .then((patients) => {
+        res.render(`patients/index.hbs`, {
+            patients: patients
+        })
+    })
     },
     show: (req, res) => {
         res.render('patients/show.hbs')

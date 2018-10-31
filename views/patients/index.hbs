@@ -1,3 +1,19 @@
-<h1>This is the patient index dudes annd dudettes</h1>
-
-index shows all patients
+<h1>Patient Manifest</h1>
+{{#each patients}}
+      <div class="row">
+    <div class="col s12 m7">
+      <div class="card">
+        <div class="card-image">
+          <img  height=150 width=50 src="https://cdn.images.express.co.uk/img/dynamic/11/590x/Older-people-believe-making-other-people-happy-is-the-key-to-their-own-happiness-799906.jpg">
+          <span class="card-title">Patient Information</span>
+        </div>
+        <div class="card-content">
+          <p>Patient Name: {{firstName}} {{lastName}} </p></div>
+        <div class="card-action">
+          <a href="/patients/{{_id}}">Patient Information</a>
+        </div>
+      </div>
+    </div>
+  </div>
+          
+    {{/each}}

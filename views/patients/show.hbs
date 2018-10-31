@@ -1,22 +1,22 @@
-<h1>THIS IS THE PATIENTS PAGE</h1>
-{{#each nursinghomes.patients}}
-      <div class="col s12 m8 offset-m2 l6 offset-l3">
+<h1>Individual Patient Information</h1>
+<div class="col s12 m8 offset-m2 l6 offset-l3">
         <div class="card-panel grey lighten-5 z-depth-1">
           <div class="row valign-wrapper">
             <div class="col s2">
-              <img src="https://images.unsplash.com/photo-1504778995644-77707b624d5a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=5e03df0db2f9ec242b13651cbe7ce139&auto=format&fit=crop&w=800&q=60" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+              <img src="https://i.pinimg.com/originals/09/b0/08/09b008ceb45878eb34180d23506e4212.gif"> <!-- notice the "circle" class -->
             </div>
             <div class="col s10">
-              <span class="black-text circle">Add the "circle" class to it to make it appear circular.
+              <span class="black-text">
+                
+<p>First Name: {{patient.firstName}}</p>
+<p>Last Name: {{patient.lastName}}</p>
+<p>Age: {{patient.age}}</p>
+<p>Medical Conditions: {{patient.conditions}}</p>
+<p>Room Number: {{patient.roomNumber}}</p>
+<p>Pet Species: {{patient.pet}}</p>
+<p>Pet Name: {{patient.petName}}</p>
               </span>
             </div>
           </div>
         </div>
       </div>
-      {{/each}}
-
-
-      //what am i doing here??? i want each patient to have a card with their picture and stats
-
-
-      //show is for individual patients

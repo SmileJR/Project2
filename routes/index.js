@@ -11,7 +11,7 @@ const patientsController = require('../controllers/patients')
 // now im going to make a route to my application controller
 router.get(`/`, applicationController.index)
 
-// =======NURSING HOMES========
+// =======NURSING HOMES======== 
 router.get(`/nursinghomes`, nursinghomesController.index)
 router.get(`/nursinghomes/:id`, nursinghomesController.show)
 
