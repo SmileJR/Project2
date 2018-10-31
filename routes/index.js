@@ -23,13 +23,16 @@ router.get(`/patients/:id`, patientsController.show)
 
 // ==============DRUGS===================
 router.get(`/drugs`, drugsController.index)
+router.get(`/drugs/new`, drugsController.new)
+router.post(`/drugs`, drugsController.create) // create new drug for the db
+
 router.get(`/drugs/:id`, drugsController.show)
 
-router.post(`/drugs`, drugsController.create)
-// router.get(`/drugs`, drugsController.new)
 
 router.get(`/drugs/:id/edit`, drugsController.edit) // this will hange that specifi drug
 router.put('/drugs/:id', drugsController.update)
+
+router.delete('drugs/:id/delete', drugsController.delete)
 
 
 

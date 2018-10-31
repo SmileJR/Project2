@@ -11,14 +11,20 @@ const drugsController = {
                 })
             })
         },
+    new: (req, res) => {
+        res.render('drugs/new')
+            },
+        
     show: (req, res) => {
         Drug.findById(req.params.id).then((drug) => {
             res.render('drugs/show', { drug: drug })
         })
     },
     create: (req, res) => {
+        // console.log("body",req.body)
         Drug.create(req.body).then((newDrug) => {
-            res.redirect(`drugs/${newDrug._id}`)
+            // res.redirect(`/drugs/${newDrug._id}`)
+            res.redirect(`/drugs`)
         })
     },
     edit: (req, res) => { //this function renders the edit.hbs page and send that drugs data to it
@@ -31,11 +37,11 @@ const drugsController = {
             res.redirect(`/${updatedDrug._id}`)
         })
     },
-    // delete: (req, res) => {
-    //     Drug.findByIdAndRemove(req.params.id).then(() => {
-    //         res.redirect(`/`)
-    //     })
-    // }
+    delete: (req, res) => { 
+        Drug.findByIdAndRemove(req.params.id).then(() => {
+            res.redirect(`/`)
+        })
+    }
 
 }
 

@@ -1,10 +1,20 @@
 <h1>
     THIS IS THE DRUG SHOW PAGE
 </h1>
-{{drug.name}}
-{{drug.strengthInMg}}
-{{drug.routeTaken}}
+<p>{{drug.name}}</p>
+<p>{{drug.strengthInMg}}</p>
+<p>{{drug.routeTaken}}</p>
 
-<a href="/drugs/{{drug._id}}/edit"><button>Edit</button></a>
+<p><a href="/drugs/{{drug._id}}/edit" class="waves-effect waves-light btn-large">Edit Drug</a></p>
 
-{{!-- <a href="edit.hbs" class="waves-effect waves-light btn"><i class="material-icons left">cloud</i>Click Here to Edit Drug Inventory</a> --}}
+{{!-- <p><a href="/drugs/{{drug._id}}/delete" class="waves-effect waves-light btn-large">Delete Drug</a></p> --}}
+ 
+ 
+ 
+ <p><form action="/drugs/{{drug._id}}?_method=DELETE" method="POST">
+      <button type="submit">DELETE THIS DRUG</button>
+    </form>
+    </p>
+
+
+<form id="delete-drug" action="/drugs/{{drug._id}}?_method=DELETE" method="POST"></form>    
