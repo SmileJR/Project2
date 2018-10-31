@@ -7,7 +7,6 @@ const Drug = require('../models/Drug.js')
 
 //SEED DATA - Drugs
 const drug1 = new Drug({
-    img: "http://d1dc7fy73ia9qh.cloudfront.net/wp-content/uploads/2016/05/Medium-Length-Hairstyles-for-Older-Women-6.jpg?iv=219",
     name: "Triazolam",
     strengthInMg: 200,
     routeTaken: "Orally",
@@ -15,7 +14,6 @@ const drug1 = new Drug({
 })
 
 const drug2 = new Drug({
-    img: "http://d1dc7fy73ia9qh.cloudfront.net/wp-content/uploads/2016/05/Medium-Length-Hairstyles-for-Older-Women-6.jpg?iv=219",
     name: "Captopril",
     strengthInMg: 1000,
     routeTaken: "Orally",
@@ -23,7 +21,6 @@ const drug2 = new Drug({
 })
 
 const drug3 = new Drug({
-    img: "http://d1dc7fy73ia9qh.cloudfront.net/wp-content/uploads/2016/05/Medium-Length-Hairstyles-for-Older-Women-6.jpg?iv=219",
     name: "Omeprazole",
     strengthInMg: 40,
     routeTaken: "Orally",

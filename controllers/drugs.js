@@ -34,7 +34,7 @@ const drugsController = {
     },
     update: (req, res) => {
         Drug.findByIdAndUpdate(req.params.id, req.body).then((updatedDrug) => {
-            res.redirect(`/${updatedDrug._id}`)
+            res.redirect(`/drugs/${updatedDrug._id}`)
         })
     },
     delete: (req, res) => { 

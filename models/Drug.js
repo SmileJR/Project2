@@ -2,7 +2,6 @@ const mongoose = require('../db/connections')
 const Schema = mongoose.Schema
 
 const Drug = new Schema({
-    img: String,
     name: String,
     strengthInMg: Number,
     routeTaken: String,
