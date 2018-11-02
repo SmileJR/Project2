@@ -6,7 +6,7 @@
 
 	<div id="edit-form" class="drug-container-show">
 
-    <form action="/{{drug._id}}?_method=PATCH" method="POST">
+    <form action="/drugs/{{drug._id}}?_method=PATCH" method="POST">
       <div>
         <label for="img">img: </label>
         <input type="text" name='img' value="{{drug.img}}">

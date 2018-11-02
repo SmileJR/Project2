@@ -30,7 +30,7 @@ router.get(`/drugs/:id`, drugsController.show)
 
 
 router.get(`/drugs/:id/edit`, drugsController.edit) // this will hange that specifi drug
-router.put('/drugs/:id', drugsController.update)
+router.patch('/drugs/:id', drugsController.update)
 
 router.delete('/drugs/:id', drugsController.delete)
 
